@@ -1,0 +1,133 @@
+Arduino Racing Dash ChangeLog
+--------------------																																																									
+
+v2.1.5
+	Add AC1.3 support and 64bit compatibility
+	
+v2.1.3:
+	Fix updater, added backup utility to restore old files upon updating error
+	Fix last lap detection and sending in iRacing
+	Move config back into app/python/acSLI/acSLI.ini - has auto detection/moving
+
+v2.1:
+	Added current lap display on Page 3
+	Delta (page 6 only) now shows last laptime for 3 secs upon crossing start/finish line
+	Improved Handshaking Algorithm + implemented in iRacing
+	Fixed small memory leak in AC app
+	Fixed version handling on handshaker/updater for 3 digit versions
+	Fixed inverted mode bugs
+	
+
+v2.0.23:
+	Fix potential critical handshake bug
+	All logs are now in 1 file
+
+v2.0.22:
+	Added OPTIONAL brake vibration on brake lockup
+	Rewrote iRacing client 
+
+v2.0.17:
+	Fix Reliant Robin Incompatibility
+
+v2.0.16:
+	Added Laps remaining fuel estimate
+	Changed display page 3 to fuel and gear only
+
+v2.0.12:
+	Update Optimisations
+	Fixes
+
+v2.0.11:
+	Try extended updater functions now idna errors are fixed
+	
+v2.0.10:
+	Compatibility Fixes
+	Added lapOffset config option under advanced. Is a static value added to the lap count. (by default set to 0 which displays laps COMPLETED, set to 1 to show current lap number)
+
+v2.0.9:
+	Fix shift light bug on 98T
+
+v2.0.8:
+	Arduino Bug fixes
+	inc/dec blinkVal from b8 + b6/b7 on dash
+
+v2.0.6:
+	Add changable colours for dash(red to green and green to red) (btn8 + btn2)
+	Tweekable Blink Starting Value by editing in .ini file, more work to come with this in the future :P
+	Fix conflicts with some apps (ov1 for exmaple)
+	Fix more updater bugs
+
+v2.0.4:
+	Fix Updater Bugs
+
+v2.0.2:
+	Updater Tweeks
+
+v2.0.0:
+	Total source rewrite
+	Gui for Com Port selection
+	Popups for Messages ect
+	Automatic Updater
+	Improved Customisation
+	Option to change tick frequency if its too low(lower frame rate should have a lower tick rate)
+
+v1.8.3:
+	Try reduce the RAM usage of arduino program
+	Edit config saver/loader in acSLI to fix small bug
+
+v1.8.2:
+	Fix EEPROM loading oversight
+
+v1.8.1:
+	Added constants in the arduino code to make changing pins easier
+
+v1.8:
+	Changed how the module is inverted again, now done by holding button 8 and then pressing button 2 (think of button 8 as a shift key)
+	Changed how num of shift lights is changed, now done by holding button 8 and then pressing button 1 (think of button 8 as a shift key)
+	Stores both the inversion and shift light setting in EEPROM memory
+
+v1.7.2:
+	Added automatic arduino detection and serial port opening to iRacing c# client / debug client
+
+v1.7.1:
+	Added variable to invert module easily
+
+v1.7:
+	Added remotely configurable intensity, use "--Intensity x" for iRacing startup args
+	Added best lap delta to display on new pages 6 and 7, button 8 now changes shift light settings, intensity can only be changed from clients now
+
+v1.6.3:
+	AC client now makes its own config.ini so user settings are not lost when updating unless you delete config.ini, it won't be overwritten
+	Added default start page feature to AC
+
+v1.6.1:
+	Fixed text input to be much more reliable
+	Prints all avalible COM Ports to console when connecting to make manually connecting easier 
+
+v1.6:
+	Added initial gui in sim to change/reconnect com ports, com port settings and units on the fly
+	Modified serial data transfer so speeds over 255xxx don't break the dash
+	New args system for iRacing Client, new syntax, arg position interchangable eg "--Port COM5 --Unit KPH"
+	iRacing client can now switch between MPH and KPH via args OR check box
+	
+v1.5:
+	Auto Com port detection in Asseto Corsa app
+
+v1.4.1:
+	Fixed error in name of a display page on arduino
+	
+v1.4:
+	Changed a display Combination to boost & gear & speed
+
+v1.3:
+	Added boost pressure output to the dash
+
+v1.2:
+	Streamlined data processing, performance increase
+
+v1.1:
+	Added Config File
+	Updated sim_info to fix max_rpm always giving '0'
+
+v1.0:
+	Initial Release
